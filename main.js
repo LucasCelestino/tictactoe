@@ -33,6 +33,7 @@ renderGame();
 function renderGame()
 {
     document.querySelector('.gameboard').innerHTML = '';
+    document.querySelector('.player-text').innerHTML = `Turno: ${playerController.player}`;
 
     for(i in gameboard.positions)
     {
@@ -55,18 +56,21 @@ function renderGame()
         gameboard.checkWin = false;
         document.querySelector('.p-win').innerHTML = 'O jogador X venceu!';
         document.querySelector('.btn-play_again').style.display = 'block';
+        document.querySelector('.player-text').innerHTML = '';
     }
     else if(checkWinner('O')) {
         gameFlow.isRunningGame = false;
         gameboard.checkWin = false;
         document.querySelector('.p-win').innerHTML = 'O jogador O venceu!';
         document.querySelector('.btn-play_again').style.display = 'block';
+        document.querySelector('.player-text').innerHTML = '';
     }
     else if(checkDraw()) {
         gameFlow.isRunningGame = false;
         gameboard.checkWin = false;
         document.querySelector('.p-win').innerHTML = 'O jogo deu empate!';
         document.querySelector('.btn-play_again').style.display = 'block';
+        document.querySelector('.player-text').innerHTML = '';
     }
 
 }

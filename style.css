@@ -94,3 +94,15 @@ button
     color:#e6ab17;
     cursor: pointer;
 }
+
+.player-text
+{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color:#e6ab17;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 10px !important;
+    margin-top: 20px;
+}
