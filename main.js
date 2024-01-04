@@ -50,22 +50,19 @@ function renderGame()
         document.querySelector('.gameboard').appendChild(div_item)
     }
 
-    if(checkWinner('X'))
-    {
+    if(checkWinner('X')) {
         gameFlow.isRunningGame = false;
         gameboard.checkWin = false;
         document.querySelector('.p-win').innerHTML = 'O jogador X venceu!';
         document.querySelector('.btn-play_again').style.display = 'block';
     }
-    else if(checkWinner('O'))
-    {
+    else if(checkWinner('O')) {
         gameFlow.isRunningGame = false;
         gameboard.checkWin = false;
         document.querySelector('.p-win').innerHTML = 'O jogador O venceu!';
         document.querySelector('.btn-play_again').style.display = 'block';
     }
-    else if(checkDraw())
-    {
+    else if(checkDraw()) {
         gameFlow.isRunningGame = false;
         gameboard.checkWin = false;
         document.querySelector('.p-win').innerHTML = 'O jogo deu empate!';
