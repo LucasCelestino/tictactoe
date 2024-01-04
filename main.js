@@ -57,14 +57,14 @@ function renderGame()
         document.querySelector('.p-win').innerHTML = 'O jogador X venceu!';
         document.querySelector('.btn-play_again').style.display = 'block';
     }
-    if(checkWinner('O'))
+    else if(checkWinner('O'))
     {
         gameFlow.isRunningGame = false;
         gameboard.checkWin = false;
         document.querySelector('.p-win').innerHTML = 'O jogador O venceu!';
         document.querySelector('.btn-play_again').style.display = 'block';
     }
-    if(checkDraw())
+    else if(checkDraw())
     {
         gameFlow.isRunningGame = false;
         gameboard.checkWin = false;
